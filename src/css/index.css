@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    transition: all 0.3s ease;
+}
+.active {
+    @apply text-[#F65D4E];
+}
+
+html{
+    overflow-x: hidden;
+    width: 100vw;
+    font-family:  "Sora", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
+}
+#root{
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.hover-parent:hover{
+    font-weight: bold;
+}
+.hover-parent:hover i:last-child{
+    transform: rotate(180deg);
+}
+.hover-parent .hover-child{
+    display: none;
+    font-weight: 500;
+    text-align: left;
+}
+.hover-parent:hover .hover-child{
+    display: block;
+}
+
+#hero-area {
+    height: 600px;
+    background-image: url("../images/hero-section.png");
+    background-repeat: no-repeat;
+    background-size: fit;
+    background-position: center center;
+    
+}
+
+
+.postion-style{
+    top: 90px;
+    z-index: 2;
+}
+
+.action-button{
+    position: absolute;
+    top: 180px;
+    z-index: 15;
+    right: -20px;    
+}
+.action-button button{
+    opacity: 0;
+}
+.relative:hover .action-button{
+    right: 0;
+}
+.relative:hover .action-button button{
+    opacity: 1;
+}
+.action-button button{
+    background-color: #fefefe;
+}
+.action-button button:last-child{
+    transition: all 1.2s ease;
+}
+
+.a_bgsize{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    border-radius: 25px;
+}
+
+.a_bgsize:hover{
+    background-size: 105%;
+}
+
+.shape-img {
+    transform: all 5s ease !important;
+    border-radius: 125px 125px 125px 40px;;
+}
+.shape-img:hover{
+    transform: scale(1.2);
+}
